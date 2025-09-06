@@ -13,6 +13,7 @@ img {
   height: 242px;
 }
 body {
+  
 }
 
 header {
@@ -29,10 +30,13 @@ main {
 
 footer {
 
-  border-radius: 40px;
-    background-color:black;
-    width:1330;
-    height:150;
+   margin-top: auto;
+      background: black;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+  
 
 }
 
@@ -47,18 +51,21 @@ p {
    border-radius: 10px; 
    width: 100px;
    height:100px;
+   padding: 30px;
 }
 
 .discord{
     border-radius: 10px;
     width: 100px;
     height:100px;
+    padding: 30px;    
 }
 
 .tiktok{
     border-radius: 10px;
        width: 100px;
        height:100px;
+      padding: 30px;
 }
 
 .game-card {
@@ -129,4 +136,8 @@ p {
     width: 100%;
     text-align: center;
   }
+}
+
+logo_footer{
+ display: flex;
 }
