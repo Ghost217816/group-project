@@ -130,3 +130,20 @@ p {
     text-align: center;
   }
 }
+
+.body-about{
+  background: linear-gradient(#0000ff,#0e092c,#000000);
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: auto;
+  color:white;
+}
+
+.About-header{
+  text-align: center;
+  font-size:30px;
+}
+
+.About-main{
+  font-size:23px;
+}
