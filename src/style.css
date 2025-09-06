@@ -13,6 +13,7 @@ img {
   height: 242px;
 }
 body {
+  
 }
 
 header {
@@ -38,6 +39,12 @@ main {
 
 footer {
 
+   margin-top: auto;
+      background: black;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
 }
 
 a:hover {
@@ -51,18 +58,21 @@ p {
    border-radius: 10px; 
    width: 100px;
    height:100px;
+   padding: 30px;
 }
 
 .discord{
     border-radius: 10px;
     width: 100px;
     height:100px;
+    padding: 30px;    
 }
 
 .tiktok{
     border-radius: 10px;
        width: 100px;
        height:100px;
+      padding: 30px;
 }
 
 
@@ -186,6 +196,7 @@ p {
 
 }
 
+
 .body-about{
   background: linear-gradient(#0000ff,#0e092c,#000000);
   background-repeat: no-repeat;
@@ -201,11 +212,16 @@ p {
 
 .About-main{
   font-size:23px;
+}
+
+logo_footer{
+ display: flex;
+}
 
   100% {
     left: 200%;
   }
-}
+
 
 
 .search-bar {
