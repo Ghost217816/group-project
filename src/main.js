@@ -2,6 +2,7 @@ const games = [
   {
     id: "1",
     title: "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+    img:"https://cdn1.epicgames.com/offer/602a0ef0aceb46cca62445439661d712/EGS_STALKER2HeartofChornobyl_GSCGameWorld_S1_2560x1440-62f2f7def1bae0e3255e49fc7177adaf",
     releaseDate: "2024-11-20",
     developer: "GSC Game World",
     genres: ["Відкритий світ", "Бойовик", "Пригоди", "Виживання"],
@@ -29,6 +30,7 @@ const games = [
   {
   id: "2",
   title: "Fortnite",
+  img:"https://cdn1.epicgames.com/offer/fn/FNBR_37-00_C6S4_EGS_Launcher_KeyArt_FNLogo_Carousel_PDP_2560x1440_logo_2560x1440-04348f5d3d52391f572e8c1050ddc737",
   releaseDate: "2017-07-21",
   developer: "Epic Games",
   genres: ["Бойовик", "Королівська битва", "Виживання", "Онлайн"],
@@ -54,6 +56,7 @@ const games = [
 {
   id: "3",
   title: "Subnautica: Below Zero",
+  img:"https://unknownworlds.com/_next/image?url=https%3A%2F%2Fd17c72h1ypygg7.cloudfront.net%2Fsubnautica%2Ffiles%2F2019%2F01%2F20190129_SN_BZ_KeyArt_16_9.jpg%2F20190129_SN_BZ_Key_Art_16_9_54f84bc0b8.jpg&w=3840&q=75",
   releaseDate: "2021-05-14",
   developer: "Unknown Worlds Entertainment",
   genres: ["Пригоди", "Виживання", "Відкритий світ"],
@@ -78,6 +81,7 @@ const games = [
 {
   id: "4",
   title: "Cities: Skylines – Snowfall",
+  img:"https://s.pacn.ws/1/p/ph/cities-skylines-snowfall-dlc-458921.5.jpg?v=rv1vtl&width=800&crop=614,344",
   releaseDate: "2016-02-18",
   developer: "Colossal Order",
   genres: ["Симулятор", "Стратегія", "Будівництво міста", "DLC"],
@@ -102,6 +106,7 @@ const games = [
 {
   id: "5",
   title: "Mortal Kombat 11",
+  img:"https://hot.game/uploads/media/poster_game/0001/13/63553ac4a31609ce264c916646d1d3421e2520e9.jpeg",
   releaseDate: "2019-04-23",
   developer: "NetherRealm Studios",
   genres: ["Бойовик", "Файтинг", "Онлайн"],
@@ -127,6 +132,7 @@ const games = [
 {
   id: "6",
   title: "Mortal Kombat 1",
+  img:"https://gaming-cdn.com/images/products/19340/orig/mortal-kombat-1-definitive-edition-definitive-edition-pc-game-steam-cover.jpg?v=1747293260",
   releaseDate: "2023-09-19",
   developer: "NetherRealm Studios",
   genres: ["Бойовик", "Файтинг", "Онлайн"],
@@ -588,3 +594,21 @@ const games = [
     tags: ["free-to-play", "multiplayer", "FPS", "team-based", "hero shooter"]
   }
 ];
+
+let container_games=document.querySelector('.games')
+function renderGames(array){
+  array.forEach(element => {
+    container_games.innerHTML+=` <div class="card">
+  <h3 class="title">${element.title}</h3>
+  <img src="${element.img}"/>
+  <p class="descr">${element.description}</p>
+  <p class="date">${element.releaseDate}</p>
+  <p class="dev">${element.developer}</p>
+  <p class="age">${element.ageRating}</p>
+  <p class="loc">${element.locale}</p>
+</div>
+    `
+  });
+}
+
+renderGames(games)
