@@ -612,3 +612,69 @@ function renderGames(array){
 }
 
 renderGames(games)
+
+
+const slider = document.getElementById('slider');
+const slidesContainer = document.getElementById('slides');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dots = Array.from(document.querySelectorAll('.dot'));
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let index = 0;
+let autoSlide;
+
+// -----------------------
+// Оновлення слайду
+// -----------------------
+function update() {
+  const w = slider.clientWidth;
+  slidesContainer.style.transform = `translate3d(${-index * w}px, 0, 0)`;
+  dots.forEach(d => d.classList.toggle('active', Number(d.dataset.index) === index));
+}
+
+// -----------------------
+// Наступний слайд
+// -----------------------
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  update();
+}
+
+// -----------------------
+// Стрілки
+// -----------------------
+prevBtn.addEventListener('click', () => { 
+  index = (index - 1 + slides.length) % slides.length; 
+  update(); 
+  restartAuto(); 
+});
+nextBtn.addEventListener('click', () => { 
+  nextSlide(); 
+  restartAuto(); 
+});
+
+// -----------------------
+// Точки
+// -----------------------
+dots.forEach(dot => {
+  dot.addEventListener('click', () => { 
+    index = Number(dot.dataset.index); 
+    update(); 
+    restartAuto(); 
+  });
+});
+
+// -----------------------
+// Автоперехід
+// -----------------------
+function startAuto() { autoSlide = setInterval(nextSlide, 10000); } 
+function restartAuto() { clearInterval(autoSlide); startAuto(); }
+
+window.addEventListener('resize', update);
+
+// -----------------------
+// Старт слайдера
+// -----------------------
+update();
+startAuto();
