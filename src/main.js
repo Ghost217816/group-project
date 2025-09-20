@@ -452,51 +452,51 @@ const games = [
 },
 
 {
-  "id": "18",
-  "title": "S.T.A.L.K.E.R.: Call of Pripyat",
-  "releaseDate": "2009-10-02",
-  "developer": "GSC Game World",
-  "genres": ["Шутер від першої особи", "Сурвайвал-хорор", "РПГ", "Пригоди"],
-  "ageRating": "18+",
-  "locale": "uk-UA",
-  "description": "S.T.A.L.K.E.R.: Call of Pripyat — це продовження культової серії, де ви граєте за майора Дегтярьова, який розслідує зникнення військової експедиції в Чорнобильській зоні. Гра поєднує відкритий світ, атмосферу постапокаліпсису та елементи виживання.",
-  "editions": [
-    { "sku": "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
-    { "sku": "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
-    { "sku": "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
+  id: "18",
+  title: "S.T.A.L.K.E.R.: Call of Pripyat",
+  releaseDate: "2009-10-02",
+  developer: "GSC Game World",
+  genres: ["Шутер від першої особи", "Сурвайвал-хорор", "РПГ", "Пригоди"],
+  ageRating: "18+",
+  locale: "uk-UA",
+  description: "S.T.A.L.K.E.R.: Call of Pripyat — це продовження культової серії, де ви граєте за майора Дегтярьова, який розслідує зникнення військової експедиції в Чорнобильській зоні. Гра поєднує відкритий світ, атмосферу постапокаліпсису та елементи виживання.",
+  editions: [
+    { sku: "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
+    { sku: "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
+    { sku: "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
   ],
-  "store": {
-    "hasDiscount": true,
-    "discountPercent": 80,
-    "discountedPriceUAH": 83
+  store: {
+    hasDiscount: true,
+    discountPercent: 80,
+    discountedPriceUAH: 83
   },
-  "platforms": ["PC (Windows)", "PlayStation 4", "Xbox One", "Nintendo Switch", "PlayStation 5", "Xbox Series X|S"],
-  "languages": ["Англійська", "Російська", "Українська", "Інші"],
-  "tags": ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
+  platforms: ["PC (Windows)", "PlayStation 4", "Xbox One", "Nintendo Switch", "PlayStation 5", "Xbox Series X|S"],
+  languages: ["Англійська", "Російська", "Українська", "Інші"],
+  tags: ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
 },
 
 {
-  "id": "19",
-  "title": "S.T.A.L.K.E.R.: Call of Pripyat",
-  "releaseDate": "2009-10-02",
-  "developer": "GSC Game World",
-  "genres": ["Шутер від першої особи", "Сурвайвал-хорор", "РПГ", "Пригоди"],
-  "ageRating": "18+",
-  "locale": "uk-UA",
-  "description": "S.T.A.L.K.E.R.: Call of Pripyat — це продовження культової серії, де ви граєте за майора Дегтярьова, який розслідує зникнення військової експедиції в Чорнобильській зоні. Гра поєднує відкритий світ, атмосферу постапокаліпсису та елементи виживання.",
-  "editions": [
-    { "sku": "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
-    { "sku": "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
-    { "sku": "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
+  id: "19",
+  title: "S.T.A.L.K.E.R.: Call of Pripyat",
+  releaseDate: "2009-10-02",
+  developer: "GSC Game World",
+  genres: ["Шутер від першої особи", "Сурвайвал-хорор", "РПГ", "Пригоди"],
+  ageRating: "18+",
+  locale: "uk-UA",
+  description: "S.T.A.L.K.E.R.: Call of Pripyat — це продовження культової серії, де ви граєте за майора Дегтярьова, який розслідує зникнення військової експедиції в Чорнобильській зоні. Гра поєднує відкритий світ, атмосферу постапокаліпсису та елементи виживання.",
+  editions: [
+    { sku: "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
+    { sku: "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
+    { sku: "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
   ],
-  "store": {
-    "hasDiscount": true,
-    "discountPercent": 80,
-    "discountedPriceUAH": 83
+  store: {
+    hasDiscount: true,
+    discountPercent: 80,
+    discountedPriceUAH: 83
   },
-  "platforms": ["PC (Windows)", "PlayStation 4", "Xbox One", "Nintendo Switch", "PlayStation 5", "Xbox Series X|S"],
-  "languages": ["Англійська", "Російська", "Українська", "Інші"],
-  "tags": ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
+  platforms: ["PC (Windows)", "PlayStation 4", "Xbox One", "Nintendo Switch", "PlayStation 5", "Xbox Series X|S"],
+  languages: ["Англійська", "Російська", "Українська", "Інші"],
+  tags: ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
 },
 
 {
