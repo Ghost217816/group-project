@@ -462,6 +462,7 @@ const games = [
 },
 
 {
+
   "id": "18",
   "title": "S.T.A.L.K.E.R.: Call of Pripyat",
   img:"https://content1.rozetka.com.ua/goods/images/big/375328387.jpg",
@@ -475,18 +476,57 @@ const games = [
     { "sku": "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
     { "sku": "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
     { "sku": "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
+
+  id: "18",
+  title: "S.T.A.L.K.E.R.: Call of Pripyat",
+  img:"https://content1.rozetka.com.ua/goods/images/big/375328387.jpg",
+  releaseDate: "2009-10-02",
+  developer: "GSC Game World",
+  genres: ["Шутер від першої особи", "Сурвайвал-хорор", "РПГ", "Пригоди"],
+  ageRating: "18+",
+  locale: "uk-UA",
+  description: "S.T.A.L.K.E.R.: Call of Pripyat — це продовження культової серії, де ви граєте за майора Дегтярьова, який розслідує зникнення військової експедиції в Чорнобильській зоні. Гра поєднує відкритий світ, атмосферу постапокаліпсису та елементи виживання.",
+  editions: [
+    { sku: "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
+    { sku: "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
+    { sku: "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
+
   ],
-  "store": {
-    "hasDiscount": true,
-    "discountPercent": 80,
-    "discountedPriceUAH": 83
+  store: {
+    hasDiscount: true,
+    discountPercent: 80,
+    discountedPriceUAH: 83
   },
-  "platforms": ["PC (Windows)", "PlayStation 4", "Xbox One", "Nintendo Switch", "PlayStation 5", "Xbox Series X|S"],
-  "languages": ["Англійська", "Російська", "Українська", "Інші"],
-  "tags": ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
+  platforms: ["PC (Windows)", "PlayStation 4", "Xbox One", "Nintendo Switch", "PlayStation 5", "Xbox Series X|S"],
+  languages: ["Англійська", "Російська", "Українська", "Інші"],
+  tags: ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
 },
 
-  
+
+{
+  id: "19",
+  title: "World of Tanks",
+  releaseDate: "2010-08-12",
+  developer: "Wargaming",
+  genres: ["Шутер від першої особи", "Симулятор", "Шутер від третьої особи", "Стратегічна відеогра"],
+  ageRating: "18+",
+  locale: "uk-UA",
+  description: "World of Tanks (WoT) – це безкоштовна онлайн-гра в жанрі танкового симулятора від білоруської студії Wargaming, яка пропонує гравцям вступати у масштабні командні бої на броньованих машинах середини ХХ століття.",
+  editions: [
+    { sku: "standard", "name": "Standard Edition", "priceUAH": Free, "discount": null },
+    { sku: "enhanced", "name": "Enhanced Edition", "priceUAH": Free, "discount": null },
+    { sku: "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
+  ],
+  store: {
+    hasDiscount: true,
+    discountPercent: 80,
+    discountedPriceUAH: 83
+  },
+  platforms: ["PC (Windows)", "PlayStation 4", "Xbox One", "PlayStation 5", "Xbox Series X|S"],
+  languages: ["Англійська", "Російська", "Українська", "Інші"],
+  tags: ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
+},
+
 
 {
   id: "19",
@@ -605,3 +645,69 @@ function renderGames(array){
 }
 
 renderGames(games)
+
+
+const slider = document.getElementById('slider');
+const slidesContainer = document.getElementById('slides');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dots = Array.from(document.querySelectorAll('.dot'));
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let index = 0;
+let autoSlide;
+
+// -----------------------
+// Оновлення слайду
+// -----------------------
+function update() {
+  const w = slider.clientWidth;
+  slidesContainer.style.transform = `translate3d(${-index * w}px, 0, 0)`;
+  dots.forEach(d => d.classList.toggle('active', Number(d.dataset.index) === index));
+}
+
+// -----------------------
+// Наступний слайд
+// -----------------------
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  update();
+}
+
+// -----------------------
+// Стрілки
+// -----------------------
+prevBtn.addEventListener('click', () => { 
+  index = (index - 1 + slides.length) % slides.length; 
+  update(); 
+  restartAuto(); 
+});
+nextBtn.addEventListener('click', () => { 
+  nextSlide(); 
+  restartAuto(); 
+});
+
+// -----------------------
+// Точки
+// -----------------------
+dots.forEach(dot => {
+  dot.addEventListener('click', () => { 
+    index = Number(dot.dataset.index); 
+    update(); 
+    restartAuto(); 
+  });
+});
+
+// -----------------------
+// Автоперехід
+// -----------------------
+function startAuto() { autoSlide = setInterval(nextSlide, 10000); } 
+function restartAuto() { clearInterval(autoSlide); startAuto(); }
+
+window.addEventListener('resize', update);
+
+// -----------------------
+// Старт слайдера
+// -----------------------
+update();
+startAuto();
