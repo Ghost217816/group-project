@@ -500,7 +500,7 @@ const games = [
   editions: [
     { sku: "standard", "name": "Standard Edition", "priceUAH": Free, "discount": null },
     { sku: "enhanced", "name": "Enhanced Edition", "priceUAH": Free, "discount": null },
-    { sku: "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
+    { sku: "legendsTrilogy", "name": "World of Tanks", "priceUAH": Free, "discount": null }
   ],
   store: {
     hasDiscount: true,
