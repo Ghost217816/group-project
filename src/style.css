@@ -243,11 +243,34 @@ body {
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
 
+
     /* ефект при наведенні */
     .btn:hover {
       transform: translateY(-4px) scale(1.05);
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
+
+.btn{
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #322985, #00c9ff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  text-align: center
+  ;
+}
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 201, 255, 0.6);
+}
+
 
     /* сяюча хвиля */
     .btn::before {
@@ -303,7 +326,7 @@ body {
   font-size:23px;
 }
 
-logo_footer{
+.logo_footer{
  display: flex;
 }
 
@@ -331,6 +354,7 @@ logo_footer{
       color: #aaa;
       transition: color 0.3s;
     }
+
 
     /* ефект при фокусі */
     .search-input:focus {
@@ -365,3 +389,60 @@ logo_footer{
     .search-btn:active {
       transform: scale(0.9);
     }
+
+
+
+.games{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+}
+
+.card{
+  width: 380px;
+  border: 10px solid black;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 4px;  
+}
+
+.title{
+  text-align: center;
+
+}
+
+.game{
+position: relative;
+overflow: hidden;
+}
+
+.hidden{
+position: absolute;
+top:0;
+left:0;
+width: 380px;
+margin: 20px;
+border: 10px solid black;
+ color: white;
+ text-decoration: none;
+ border-radius: 15px;
+ padding: 4px;
+background-color: rgba(0,0,0,0.8);
+opacity: 0;
+transition: opacity1 s ease;/*Плавний перехід появи тексту*/
+}
+
+.game:hover .tovar{
+opacity: 0;
+}
+
+.game:hover .hidden{
+opacity: 1;
+}
+
+
+
+
+
