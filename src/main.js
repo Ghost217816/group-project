@@ -475,23 +475,8 @@ const games = [
   "editions": [
     { "sku": "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
     { "sku": "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
-    { "sku": "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
+    { "sku": "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }],
 
-  id: "18",
-  title: "S.T.A.L.K.E.R.: Call of Pripyat",
-  img:"https://content1.rozetka.com.ua/goods/images/big/375328387.jpg",
-  releaseDate: "2009-10-02",
-  developer: "GSC Game World",
-  genres: ["Шутер від першої особи", "Сурвайвал-хорор", "РПГ", "Пригоди"],
-  ageRating: "18+",
-  locale: "uk-UA",
-  description: "S.T.A.L.K.E.R.: Call of Pripyat — це продовження культової серії, де ви граєте за майора Дегтярьова, який розслідує зникнення військової експедиції в Чорнобильській зоні. Гра поєднує відкритий світ, атмосферу постапокаліпсису та елементи виживання.",
-  editions: [
-    { sku: "standard", "name": "Standard Edition", "priceUAH": 415, "discount": null },
-    { sku: "enhanced", "name": "Enhanced Edition", "priceUAH": 415, "discount": null },
-    { sku: "legendsTrilogy", "name": "S.T.A.L.K.E.R.: Legends of the Zone Trilogy", "priceUAH": 415, "discount": null }
-
-  ],
   store: {
     hasDiscount: true,
     discountPercent: 80,
@@ -499,7 +484,7 @@ const games = [
   },
   platforms: ["PC (Windows)", "PlayStation 4", "Xbox One", "Nintendo Switch", "PlayStation 5", "Xbox Series X|S"],
   languages: ["Англійська", "Російська", "Українська", "Інші"],
-  tags: ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"]
+  tags: ["singleplayer", "story-rich", "post-apocalypse", "open-world", "survival-horror"],
 },
 
 
@@ -509,7 +494,7 @@ const games = [
   releaseDate: "2010-08-12",
   developer: "Wargaming",
   genres: ["Шутер від першої особи", "Симулятор", "Шутер від третьої особи", "Стратегічна відеогра"],
-  ageRating: "18+",
+  ageRating: "12+",
   locale: "uk-UA",
   description: "World of Tanks (WoT) – це безкоштовна онлайн-гра в жанрі танкового симулятора від білоруської студії Wargaming, яка пропонує гравцям вступати у масштабні командні бої на броньованих машинах середини ХХ століття.",
   editions: [
