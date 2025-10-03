@@ -1007,6 +1007,7 @@ const games = [
   },
 ];
 
+//Рендер карток
 let container_games = document.querySelector(".games");
 function renderGames(array) {
   array.forEach((element) => {
@@ -1025,6 +1026,7 @@ function renderGames(array) {
 
 renderGames(games);
 
+//Slider
 const slider = document.getElementById("slider");
 const slidesContainer = document.getElementById("slides");
 const slides = Array.from(document.querySelectorAll(".slide"));
@@ -1096,3 +1098,29 @@ window.addEventListener("resize", update);
 // -----------------------
 update();
 startAuto();
+
+let home = document.querySelector("#home");
+let about = document.querySelector("#about");
+let gameList = document.querySelector("#game");
+let aboutBox = document.querySelector(".About-main");
+
+home.addEventListener("click", (event) => {
+  event.preventDefault(); // Щоб не оновлювалася сторінка
+  container_games.style.display = "none";
+  aboutBox.style.display = "none";
+  slider.style.display = "block";
+});
+
+about.addEventListener("click", (event) => {
+  event.preventDefault();
+  container_games.style.display = "none";
+  slider.style.display = "none";
+  aboutBox.style.display = "block";
+});
+
+gameList.addEventListener("click", (event) => {
+  event.preventDefault();
+  container_games.style.display = "flex";
+  slider.style.display = "none";
+  aboutBox.style.display = "none";
+});

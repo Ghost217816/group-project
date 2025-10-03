@@ -10,10 +10,11 @@
 
     <header>
 <div class="cnopku">
+  <img src="/src/img/logo2.png" class="logo"/>
                     <div class="nav-bar">
-                      <a class="btn" href="">HOME</a>
-                    <a class="btn" href="">ABOUT</a>
-                    <a class="btn" href="">GAME</a>
+                      <a class="btn" href="" id="home">HOME</a>
+                    <a class="btn" href="" id="about">ABOUT</a>
+                    <a class="btn" href="" id="game">GAME</a>
                     </div>
                     <form action="/search" method="get">
                     <input type="text" class="search-bar" placeholder="Пошук...">
@@ -23,10 +24,7 @@
 
     </header>
     <main>
-
      
-                
-
                   <section class="slider" id="slider">
     <div class="slides" id="slides">
 
@@ -185,22 +183,46 @@
       <span class="dot" data-index="7"></span>
     </div>
   </section>
+
+ 
      
- <div class="games">
+ <section class="games">
 
 
 
- </div>
+ </section>
 
+<section class="About-main">
+        <p class="About-header">Розробники цього сайту</p>
 
+    <div class="about-div">
+     <p><b>Віталій Бабій : Голова команди</p>
+     <p>--------------------------------------------------------------</p>
+     <p>Артем Скоропад : Розробник, писав Java script</p>
+     <p>--------------------------------------------------------------</p>
+     <p>Ілья Павлов : Розробник, створив цей сайт</p>
+     <p>--------------------------------------------------------------</p>
+     <p>Юрій Бандурівский : Розробник, шукав картинки для сайту</p> 
+     <p>--------------------------------------------------------------</p>
+     <p>Макс Штойко : Розробник, створив основу сайту (Main)</p>
+     <p>--------------------------------------------------------------</p>
+     <p>Даня Дзюбенко : Розробник, створив підвал сайту (footer)</p>
+     <p>--------------------------------------------------------------</p>     
+     <p>Артем Ящчук : Розробник, Створював макет сайту </b></p>
+    </div>
+</section>
 
         
 
 
     </main>
     <footer>
+      <img src="/src/img/logo.png"  class="logo"/>
 
-            <div class="logo_footer">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+         <p>Слідкуйте за нами:</p>
+          <div class="logo_footer">
+             
             
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZfLuviePOqQJ1yuhvxr80AsqV91Btr2rqZw&s" >
           
@@ -214,6 +236,9 @@
             <img src="https://m.media-amazon.com/images/I/41b3zsiq4pL.png">
            </a>
              </div>
+      </div>
+
+           
    
 
 
@@ -222,6 +247,6 @@
 
     </footer>
 
-   <script src="src/main.js"></script>
+   <script src="/src/main.js" defer></script>
 </body>
 </html>
