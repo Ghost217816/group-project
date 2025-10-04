@@ -146,6 +146,7 @@ body {
   margin: 0 0 10px 0;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 
 .small-images {
@@ -165,6 +166,7 @@ body {
 .message {
   font-size: 14px;
   font-style: italic;
+  color: #ffffff;
 }
 
 /* Стрілки */
@@ -319,7 +321,7 @@ body {
 .About-header {
   text-align: center;
   font-size: 50px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .about-div {
@@ -331,6 +333,7 @@ body {
 .About-main {
   display: none;
   font-size: 23px;
+  color: white;
 }
 
 .logo_footer {
