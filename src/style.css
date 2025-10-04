@@ -13,10 +13,11 @@ img {
   height: 242px;
 }
 body {
-  
+  margin: 0 auto;
 }
 
 header {
+
 
   
   background-color: #00c9ff;
@@ -24,6 +25,7 @@ header {
   width: 1400px;
   margin: 20px;
   padding: 40px;
+  margin: 10px;
 
 }
 
@@ -37,6 +39,7 @@ main {
 }
 
 footer {
+
 background: black;
       border-radius: 12px;
       display: flex;
@@ -44,7 +47,13 @@ background: black;
       align-items: center;
       padding: 20px;
       margin: 10px;
-   
+  margin-top: auto;
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+
 }
 
 a:hover {
@@ -54,6 +63,7 @@ h2 {
 }
 p {
 }
+
 .github{
    width: 40px;
       height: 40px;
@@ -84,27 +94,93 @@ p {
       transition: transform 0.2s ease;
 }
 
+.logo {
+  width: 200px;
+  height: auto;
+}
 
+.github {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+}
 
+.discord {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
 
+}
 
+.tiktok {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+}
 
+/* Базові стилі */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  background: #0f2a3a;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  padding: 24px;
+}
 
+/* контейнер слайдера */
+.slider {
+  max-width: 1100px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ряд слайдів (flex) */
+.slides {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.22, 0.9, 0.34, 1);
+  will-change: transform;
+}
+
+/* Кожен слайд */
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(135deg, #142533 0%, #1f3b4a 100%);
+  min-height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------
+   Стилі картки гри
+------------------- */
 .game-card {
   display: flex;
-  background: #ddd;
   padding: 10px;
   border-radius: 6px;
-  max-width: 800px;
+  max-width: 1200px;
   gap: 15px;
-  margin: 0 auto; 
+  margin: 0 auto;
+  color: #000;
 }
 
 /* велике зображення */
 .main-image img {
-  width: 400px;
-  height: 300px;
+  width: 616px;
+  height: 353px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -140,26 +216,97 @@ p {
   font-style: italic;
 }
 
+/* Стрілки */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.arrow.left {
+  left: 14px;
+}
+.arrow.right {
+  right: 14px;
+}
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
 
+/* Точки */
+.dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+.dot.active {
+  background: #fff;
+}
 
-.cnopku{
+.cnopku {
   display: flex;
   background: #ddd;
   padding: 10px;
   border-radius: 6px;
-  max-width: 600px;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.nav-bar {
+  display: flex;
   gap: 15px;
-  margin: 0 auto; 
-  margin-bottom: 10px;
+  height: 45px;
+  align-items: center;
+}
+.btn {
+  position: relative;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* ефект при наведенні */
+.btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
 
-.btn{
+.btn {
   padding: 12px 24px;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(45deg, #6a5af9, #00c9ff);
+  background: linear-gradient(45deg, #322985, #00c9ff);
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -167,90 +314,214 @@ p {
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  text-align: center
-  ;
+  text-align: center;
 }
 .btn:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(0, 201, 255, 0.6);
 }
 
-/* Анімація при кліку */
-.btn:active {
-  transform: scale(0.95) rotate(-2deg);
-  box-shadow: 0 2px 8px rgba(0, 201, 255, 0.4);
-}
-
-/* Додаємо "світловий промінь" */
+/* сяюча хвиля */
 .btn::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
+  left: -75%;
+  width: 50%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  transform: skewX(-25deg);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
 }
 
-/* Анімація проблиску */
 .btn:hover::before {
-  animation: shine 0.8s forwards;
+  animation: shine 1s forwards;
 }
 
 @keyframes shine {
   0% {
-    left: -100%;
+    left: -75%;
   }
-
+  100% {
+    left: 125%;
+  }
 }
 
+/* ефект при кліку */
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
 
-.body-about{
-  background: linear-gradient(#0000ff,#0e092c,#000000);
+.body-about {
+  background: linear-gradient(#0000ff, #0e092c, #000000);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   height: auto;
-  color:white;
+  color: rgb(0, 0, 0);
 }
 
-.About-header{
+.About-header {
   text-align: center;
-  font-size:30px;
+  font-size: 50px;
+  color: black;
 }
 
-.About-main{
-  font-size:23px;
+.about-div {
+  border: 10px double black;
+  background-color: #818181;
+  font-size: 20px;
 }
 
-logo_footer{
- display: flex;
+.About-main {
+  display: none;
+  font-size: 23px;
 }
 
-
+.logo_footer {
+  display: flex;
+}
 
 .search-bar {
-  width: 100%;
-  max-width: 400px;       /* ширина */
-  padding: 12px 16px;     /* внутрішні відступи */
-  border: 2px solid #ccc; /* рамка */
-  border-radius: 30px;    /* закруглені кути */
-  font-size: 16px;        /* розмір тексту */
-  outline: none;          /* прибирає стандартну рамку при фокусі */
-  transition: 0.3s ease;  /* плавні переходи */
+  height: 45px;
+  max-width: 300px;
+  border-radius: 12px;
+  padding-left: 5px;
 }
-
-/* Стиль при фокусі */
 .search-bar:focus {
-  border-color: #4a90e2;   /* колір рамки */
-  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* підсвітка */
+  border-color: #322985;
 }
 
-/* Стиль плейсхолдера */
-.search-bar::placeholder {
-  color: #aaa;
-  font-style: italic;
+.search-input {
+  width: 100%;
+  padding: 12px 45px 12px 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  background: #1f2937;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
 
+.search-input::placeholder {
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+/* ефект при фокусі */
+.search-input:focus {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  box-shadow: 0 0 20px rgba(167, 119, 227, 0.8);
+  transform: scale(1.05);
+}
+
+.search-input:focus::placeholder {
+  color: #ddd;
+}
+
+/* кнопка пошуку */
+.search-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.search-btn:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.search-btn:active {
+  transform: scale(0.9);
+}
+
+.games {
+  display: none;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.card {
+  width: 400px;
+  border: 10px solid black;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 8px;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+}
+
+.game {
+  position: relative;
+  overflow: hidden;
+}
+
+.hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  margin: 20px;
+  border: 10px solid black;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity1 s ease; /*Плавний перехід появи тексту*/
+}
+
+.game:hover .tovar {
+  opacity: 0;
+}
+
+.game:hover .hidden {
+  opacity: 1;
+}
+
+footer {
+  font-size: 20px;
+}
+
+footer img {
+  width: 100px;
+  height: 100px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.logo_footer {
+  display: flex;
+  gap: 20px;
+}
+.logo-like {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
 }
 
 
